@@ -2,6 +2,7 @@ import React from "react";
 //import { Typography } from "antd";
 //import { Footer, Header } from "antd/es/layout/layout"; // later on you can try using this components from antd and modifying
 import { Product, FooterBanner, HeroBanner } from "../components";
+import { client } from "../lib/client";
 
 const Home = () => {
   //const { Title, Text } = Typography; // do it later on
@@ -16,7 +17,9 @@ const Home = () => {
         <p>Speakers of many variations</p>
       </div>
       <div className="products-container">
-        {dummyProducts.map((product) => product)}
+        {dummyProducts.map((product) => (
+          <Product>{product}</Product>
+        ))}
       </div>
       <FooterBanner>Footer</FooterBanner>
     </>
